@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //margin
+    <dimen name="margin_60">60dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_50">50dp</dimen>
+    <dimen name="margin_88">88dp</dimen>
+    <dimen name="margin_36">36dp</dimen>
+
+    //text_size
+    <dimen name="text_size_30">30dp</dimen>
+    <dimen name="text_size_17">17dp</dimen>
+
+    //layout
+    <dimen name="width_8">8dp</dimen>
+    <dimen name="height_8">8dp</dimen>
+    <dimen name="view_height_56">56dp</dimen>
+
+    //radius
+    <dimen name="card_radius_20">20dp</dimen>
+
+    //padding
+    <dimen name="padding_bottom_74">74dp</dimen>
+    <dimen name="padding_30">30dp</dimen>
+    <dimen name="padding_12">12dp</dimen>
+</resources>
