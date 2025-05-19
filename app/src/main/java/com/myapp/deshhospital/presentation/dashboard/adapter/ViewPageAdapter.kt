@@ -4,7 +4,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.myapp.deshhospital.R
+import com.myapp.medicinestore.R
 
 class ViewPageAdapter(private val views:List<View>):RecyclerView.Adapter<ViewPageAdapter.ViewHolder>() {
     class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){

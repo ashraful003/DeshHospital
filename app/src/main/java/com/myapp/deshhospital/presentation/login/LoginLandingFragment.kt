@@ -1,5 +1,6 @@
 package com.myapp.deshhospital.presentation.login
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,11 +10,17 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.viewpager2.widget.ViewPager2
-import com.myapp.deshhospital.R
-import com.myapp.deshhospital.databinding.FragmentLoginLandingBinding
 import com.myapp.deshhospital.presentation.dashboard.adapter.ViewPageAdapter
+import com.myapp.deshhospital.util.DHActivityUtil
+import com.myapp.medicinestore.R
+import com.myapp.medicinestore.databinding.FragmentLoginLandingBinding
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class LoginLandingFragment : Fragment() {
+    @Inject
+    lateinit var activityUtil:DHActivityUtil
     val actionLogin = Navigation.createNavigateOnClickListener(R.id.action_loginLandingFragment_to_loginInputFragment)
     val actionSignUp = Navigation.createNavigateOnClickListener(R.id.action_loginLandingFragment_to_loginCreateFragment)
     private lateinit var binding: FragmentLoginLandingBinding
@@ -21,8 +28,10 @@ class LoginLandingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_login_landing, container, false)
+        binding = DataBindingUtil.inflate(inflater,
+            R.layout.fragment_login_landing, container, false)
         binding.model = this
+        activityUtil.hideBottomNavigation(true)
         val pageOneView = LayoutInflater.from(activity).inflate(R.layout.login_slider_page_one,null)
         val pageTwoView = LayoutInflater.from(activity).inflate(R.layout.login_slider_page_two,null)
         val pageThreeView = LayoutInflater.from(activity).inflate(R.layout.login_slider_page_three,null)
@@ -53,6 +62,7 @@ class LoginLandingFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("SuspiciousIndentation")
     private fun changeColor() {
      val context = requireContext()
         when(binding.sliderViewPager.currentItem){
