@@ -12,8 +12,14 @@ import androidx.viewpager2.widget.ViewPager2
 import com.myapp.deshhospital.R
 import com.myapp.deshhospital.databinding.FragmentLoginLandingBinding
 import com.myapp.deshhospital.presentation.dashboard.adapter.ViewPageAdapter
+import com.myapp.deshhospital.util.DHActivityUtil
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class LoginLandingFragment : Fragment() {
+    @Inject
+    lateinit var activityUtil: DHActivityUtil
     val actionLogin = Navigation.createNavigateOnClickListener(R.id.action_loginLandingFragment_to_loginInputFragment)
     val actionSignUp = Navigation.createNavigateOnClickListener(R.id.action_loginLandingFragment_to_loginCreateFragment)
     private lateinit var binding: FragmentLoginLandingBinding
@@ -23,6 +29,7 @@ class LoginLandingFragment : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_login_landing, container, false)
         binding.model = this
+        activityUtil.hideBottomNavigation(true)
         val pageOneView = LayoutInflater.from(activity).inflate(R.layout.login_slider_page_one,null)
         val pageTwoView = LayoutInflater.from(activity).inflate(R.layout.login_slider_page_two,null)
         val pageThreeView = LayoutInflater.from(activity).inflate(R.layout.login_slider_page_three,null)
