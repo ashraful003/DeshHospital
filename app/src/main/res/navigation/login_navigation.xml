@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_loginInputFragment_to_loginCreateFragment"
             app:destination="@id/loginCreateFragment" />
+        <action
+            android:id="@+id/action_loginInputFragment_to_loginForgotPasswordFragment"
+            app:destination="@id/loginForgotPasswordFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginCreateFragment"
@@ -39,6 +42,15 @@
             app:destination="@id/loginLandingFragment" />
         <action
             android:id="@+id/action_loginCreateFragment_to_loginInputFragment"
+            app:destination="@id/loginInputFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginForgotPasswordFragment"
+        android:name="com.myapp.deshhospital.presentation.login.LoginForgotPasswordFragment"
+        android:label="fragment_login_forgot_password"
+        tools:layout="@layout/fragment_login_forgot_password" >
+        <action
+            android:id="@+id/action_loginForgotPasswordFragment_to_loginInputFragment"
             app:destination="@id/loginInputFragment" />
     </fragment>
 </navigation>

@@ -1,5 +1,6 @@
 package com.myapp.deshhospital.presentation.login
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.viewpager2.widget.ViewPager2
 import com.myapp.deshhospital.R
@@ -23,6 +25,7 @@ class LoginLandingFragment : Fragment() {
     val actionLogin = Navigation.createNavigateOnClickListener(R.id.action_loginLandingFragment_to_loginInputFragment)
     val actionSignUp = Navigation.createNavigateOnClickListener(R.id.action_loginLandingFragment_to_loginCreateFragment)
     private lateinit var binding: FragmentLoginLandingBinding
+    private lateinit var viewModel: LoginViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -60,6 +63,7 @@ class LoginLandingFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("SuspiciousIndentation")
     private fun changeColor() {
      val context = requireContext()
         when(binding.sliderViewPager.currentItem){
@@ -79,5 +83,9 @@ class LoginLandingFragment : Fragment() {
                 binding.dotThreeIv.setBackgroundColor(ContextCompat.getColor(context,R.color.blue_500))
             }
         }
+    }
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
     }
 }
