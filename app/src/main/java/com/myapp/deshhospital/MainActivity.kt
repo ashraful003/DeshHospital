@@ -4,8 +4,11 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
@@ -28,6 +31,28 @@ class MainActivity : AppCompatActivity(),DHActivityUtil.ActivityListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater).apply { setContentView(root) }
+
+        setSupportActionBar(binding.toolbar)
+        binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_toggle) // use your hamburger icon here
+
+        binding.vavView.setNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.nav_home -> showToast("Click Home")
+                R.id.nav_profile -> showToast("Click Profile")
+                R.id.nav_screening -> showToast("Click Screening")
+                R.id.nav_invoice -> showToast("Click Invoice")
+                R.id.nav_discharge -> showToast("Click Discharge")
+                R.id.nav_changePass -> showToast("Click Change Password")
+                R.id.nav_exit -> showToast("Click Exit")
+            }
+            binding.drawerLayout.closeDrawer(binding.vavView)
+            true
+        }
+
+
+
         val authUser:Boolean = try {
             !sharedPrefs.getAuthToken().isNullOrEmpty()
         }catch (e:Exception){
@@ -57,7 +82,24 @@ class MainActivity : AppCompatActivity(),DHActivityUtil.ActivityListener {
             flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         }
     }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                // Toggle manually
+                if (binding.drawerLayout.isDrawerOpen(binding.vavView)) {
+                    binding.drawerLayout.closeDrawer(binding.vavView)
+                } else {
+                    binding.drawerLayout.openDrawer(binding.vavView)
+                }
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
 
+    private fun showToast(msg: String) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+    }
     override fun hideBottomNavigation(hide: Boolean) {
         if (hide){
             binding.bottomNavigationView.visibility = View.GONE
@@ -68,11 +110,25 @@ class MainActivity : AppCompatActivity(),DHActivityUtil.ActivityListener {
 
     override fun setFullScreenLoading(short: Boolean) {
         if (short){
-          binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
+          binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
           binding.fullscreenLoading.visibility = View.VISIBLE
         }else{
             binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
             binding.fullscreenLoading.visibility = View.GONE
+        }
+    }
+
+    override fun hideDrawerNavigation(hide: Boolean) {
+        if (hide){
+            binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+            binding.vavView.visibility = View.GONE
+            binding.toolbar.visibility = View.GONE
+            supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        }else{
+            binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
+            binding.vavView.visibility = View.VISIBLE
+            binding.toolbar.visibility = View.VISIBLE
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
         }
     }
 }
