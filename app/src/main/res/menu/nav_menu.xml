@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/profile" />
+    <item
+        android:id="@+id/nav_screening"
+        android:icon="@drawable/ic_report"
+        android:title="@string/health_screening" />
+    <item
+        android:id="@+id/nav_invoice"
+        android:icon="@drawable/ic_invoice"
+        android:title="@string/in_patient_bill" />
+    <item
+        android:id="@+id/nav_discharge"
+        android:icon="@drawable/ic_discharge"
+        android:title="@string/in_patient_discharge" />
+    <item
+        android:id="@+id/nav_changePass"
+        android:icon="@drawable/ic_password"
+        android:title="@string/change_password"/>
+    <item
+        android:id="@+id/nav_exit"
+        android:icon="@drawable/ic_exit"
+        android:title="@string/logout"/>
+</menu>

@@ -33,6 +33,7 @@ class LoginLandingFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_login_landing, container, false)
         binding.model = this
         activityUtil.hideBottomNavigation(true)
+        activityUtil.hideDrawerNavigation(true)
         val pageOneView = LayoutInflater.from(activity).inflate(R.layout.login_slider_page_one,null)
         val pageTwoView = LayoutInflater.from(activity).inflate(R.layout.login_slider_page_two,null)
         val pageThreeView = LayoutInflater.from(activity).inflate(R.layout.login_slider_page_three,null)

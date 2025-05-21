@@ -1,17 +1,22 @@
 package com.myapp.deshhospital.presentation.login
 
+import android.annotation.SuppressLint
+import android.os.Build
+import android.os.Handler
 import android.os.Bundle
 import android.util.Patterns
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.Observable
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.jakewharton.rxbinding2.widget.RxTextView
+import com.myapp.deshhospital.MainActivity
 import com.myapp.deshhospital.R
 import com.myapp.deshhospital.databinding.FragmentLoginInputBinding
 import com.myapp.deshhospital.util.DHActivityUtil
@@ -22,12 +27,16 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class LoginInputFragment : Fragment() {
+    @Inject
+    lateinit var sharedPrefs:SharePreferenceUtil
     val actionSignUp = Navigation.createNavigateOnClickListener(R.id.action_loginInputFragment_to_loginCreateFragment)
     val actionForgotPassword = Navigation.createNavigateOnClickListener(R.id.action_loginInputFragment_to_loginForgotPasswordFragment)
     @Inject
     lateinit var activityUtil: DHActivityUtil
     private lateinit var binding: FragmentLoginInputBinding
     private lateinit var viewModel: LoginViewModel
+    @RequiresApi(Build.VERSION_CODES.O)
+    @SuppressLint("CheckResult")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -61,6 +70,16 @@ class LoginInputFragment : Fragment() {
         }
         invalidFiledStream.subscribe { isValid ->
             isEnableSignInButton(isValid)
+        }
+        binding.btnSignIn.setOnClickListener {
+
+            activityUtil.setFullScreenLoading(true)
+            Handler().postDelayed({
+                sharedPrefs.setAuthToken("Ashraful")
+                activity?.let {
+                    startActivity(MainActivity.getLaunchIntent(it))
+                }
+            }, 3000)
         }
         return binding.root
     }
