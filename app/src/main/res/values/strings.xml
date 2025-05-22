@@ -62,4 +62,11 @@
     <string name="human_resource">Human Resource</string>
     <string name="other_staff">Other Staff</string>
     <string name="staff">Staff</string>
+    <string name="post">Post</string>
+    <string name="qualification">Qualification</string>
+    <string name="address">Address</string>
+    <string name="create_an_account">Create An Account</string>
+    <string name="continue_btn">Continue</string>
+    <string name="licence_number">Licence Number</string>
+    <string name="nid_card_number">Nid card Number</string>
 </resources>
