@@ -69,4 +69,21 @@
     <string name="continue_btn">Continue</string>
     <string name="licence_number">Licence Number</string>
     <string name="nid_card_number">Nid card Number</string>
+    <string name="view_all_doctors">VIEW ALL DOCTORS</string>
+    <string name="specialties">Specialties</string>
+    <string name="specialties_field">Specialties field</string>
+    <string name="patient_s_nric_passport_no">Patient\'s NRIC / Passport No</string>
+    <string name="appointment_date">Appointment Date</string>
+    <string name="appointment_time">Appointment Time</string>
+    <string name="make_appointment_now">Make Appointment Now</string>
+    <string name="error_identity">Please input NRIC / Passport</string>
+    <string name="error_date">Please input date</string>
+    <string name="error_time">Please input time</string>
+    <string name="error_field_name">Invalid field name</string>
+    <string name="create_doctor_account">Create Doctor Account</string>
+    <string name="all_specialties_doctor">All Specialties Doctor</string>
+    <string name="doctor_s_information">Doctor\'s Information</string>
+    <string name="field_name">Field Name</string>
+    <string name="make_appointment">Make Appointment</string>
+    <string name="all_doctors">All Doctors</string>
 </resources>

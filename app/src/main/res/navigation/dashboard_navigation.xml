@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_homeFragment_to_doctorFragment"
             app:destination="@id/doctorFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_allSpecialtiesFragment"
+            app:destination="@id/allSpecialtiesFragment" />
     </fragment>
     <fragment
         android:id="@+id/doctorFragment"
@@ -22,20 +25,11 @@
             android:id="@+id/action_doctorFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
         <action
-            android:id="@+id/action_doctorFragment_to_doctorDetailsFragment"
-            app:destination="@id/doctorDetailsFragment" />
-        <action
             android:id="@+id/action_doctorFragment_to_addDoctorFragment"
             app:destination="@id/addDoctorFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/doctorDetailsFragment"
-        android:name="com.myapp.deshhospital.presentation.dashboard.doctor.DoctorDetailsFragment"
-        android:label="fragment_doctor_details"
-        tools:layout="@layout/fragment_doctor_details" >
         <action
-            android:id="@+id/action_doctorDetailsFragment_to_doctorFragment"
-            app:destination="@id/doctorFragment" />
+            android:id="@+id/action_doctorFragment_to_doctorDetailsFragment"
+            app:destination="@id/doctorDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/addDoctorFragment"
@@ -43,6 +37,82 @@
         android:label="AddDoctorFragment" >
         <action
             android:id="@+id/action_addDoctorFragment_to_doctorFragment"
+            app:destination="@id/doctorFragment" />
+        <action
+            android:id="@+id/action_addDoctorFragment_to_specialtiesDoctorFragment"
+            app:destination="@id/specialtiesDoctorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allSpecialtiesFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.appointment.AllSpecialtiesFragment"
+        android:label="fragment_all_specialties"
+        tools:layout="@layout/fragment_all_specialties" >
+        <action
+            android:id="@+id/action_allSpecialtiesFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_allSpecialtiesFragment_to_specialtiesDoctorFragment"
+            app:destination="@id/specialtiesDoctorFragment" />
+        <action
+            android:id="@+id/action_allSpecialtiesFragment_to_addSpecialtiesFieldFragment"
+            app:destination="@id/addSpecialtiesFieldFragment" />
+        <action
+            android:id="@+id/action_allSpecialtiesFragment_to_userViewDoctorFragment"
+            app:destination="@id/userViewDoctorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/specialtiesDoctorFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.appointment.SpecialtiesDoctorFragment"
+        android:label="fragment_specialties_doctor"
+        tools:layout="@layout/fragment_specialties_doctor" >
+        <action
+            android:id="@+id/action_specialtiesDoctorFragment_to_allSpecialtiesFragment"
+            app:destination="@id/allSpecialtiesFragment" />
+        <action
+            android:id="@+id/action_specialtiesDoctorFragment_to_appointmentFragment"
+            app:destination="@id/appointmentFragment" />
+        <action
+            android:id="@+id/action_specialtiesDoctorFragment_to_addDoctorFragment"
+            app:destination="@id/addDoctorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/appointmentFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.appointment.AppointmentFragment"
+        android:label="fragment_appointment"
+        tools:layout="@layout/fragment_appointment" >
+        <action
+            android:id="@+id/action_appointmentFragment_to_specialtiesDoctorFragment"
+            app:destination="@id/specialtiesDoctorFragment" />
+        <action
+            android:id="@+id/action_appointmentFragment_to_userViewDoctorFragment"
+            app:destination="@id/userViewDoctorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addSpecialtiesFieldFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.appointment.AddSpecialtiesFieldFragment"
+        android:label="fragment_add_specialties_field"
+        tools:layout="@layout/fragment_add_specialties_field" >
+        <action
+            android:id="@+id/action_addSpecialtiesFieldFragment_to_allSpecialtiesFragment"
+            app:destination="@id/allSpecialtiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userViewDoctorFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.doctor.UserViewDoctorFragment"
+        android:label="UserViewDoctorFragment" >
+        <action
+            android:id="@+id/action_userViewDoctorFragment_to_allSpecialtiesFragment"
+            app:destination="@id/allSpecialtiesFragment" />
+        <action
+            android:id="@+id/action_userViewDoctorFragment_to_appointmentFragment"
+            app:destination="@id/appointmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorDetailsFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.doctor.DoctorDetailsFragment"
+        android:label="DoctorDetailsFragment" >
+        <action
+            android:id="@+id/action_doctorDetailsFragment_to_doctorFragment"
             app:destination="@id/doctorFragment" />
     </fragment>
 </navigation>
