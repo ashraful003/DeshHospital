@@ -11,6 +11,7 @@
     <color name="slidePage">#e6e6e6</color>
     <color name="progress_bar_background_color">#9d000000</color>
     <color name="gray">#82888A</color>
+    <color name="gray_100">#e5e6e6</color>
     <color name="background">#F7F9FC</color>
     <color name="page_title_text_color">#222B45</color>
     <color name="black_003">#f2f2f2</color>

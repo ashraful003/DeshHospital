@@ -914,6 +914,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/margin_16"
                     android:layout_marginBottom="@dimen/margin_28"
+                    android:onClick="@{model.actionAppointment}"
                     android:backgroundTint="@color/sky_blue"
                     android:src="@drawable/ic_appointment"
                     app:layout_constraintBottom_toBottomOf="parent"
