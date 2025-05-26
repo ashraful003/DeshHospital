@@ -15,6 +15,9 @@
         <action
             android:id="@+id/action_homeFragment_to_allSpecialtiesFragment"
             app:destination="@id/allSpecialtiesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_prescriptionHomeFragment"
+            app:destination="@id/prescriptionHomeFragment" />
     </fragment>
     <fragment
         android:id="@+id/doctorFragment"
@@ -114,5 +117,50 @@
         <action
             android:id="@+id/action_doctorDetailsFragment_to_doctorFragment"
             app:destination="@id/doctorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/prescriptionHomeFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.prescription.PrescriptionHomeFragment"
+        android:label="fragment_prescription_home"
+        tools:layout="@layout/fragment_prescription_home" >
+        <action
+            android:id="@+id/action_prescriptionHomeFragment_to_prescriptionListFragment"
+            app:destination="@id/prescriptionListFragment" />
+        <action
+            android:id="@+id/action_prescriptionHomeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/prescriptionListFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.prescription.PrescriptionListFragment"
+        android:label="fragment_prescription_list"
+        tools:layout="@layout/fragment_prescription_list" >
+        <action
+            android:id="@+id/action_prescriptionListFragment_to_prescriptionHomeFragment"
+            app:destination="@id/prescriptionHomeFragment" />
+        <action
+            android:id="@+id/action_prescriptionListFragment_to_addPrescriptionFragment"
+            app:destination="@id/addPrescriptionFragment" />
+        <action
+            android:id="@+id/action_prescriptionListFragment_to_prescriptionDetailsFragment"
+            app:destination="@id/prescriptionDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPrescriptionFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.prescription.AddPrescriptionFragment"
+        android:label="fragment_add_prescription"
+        tools:layout="@layout/fragment_add_prescription" >
+        <action
+            android:id="@+id/action_addPrescriptionFragment_to_prescriptionListFragment"
+            app:destination="@id/prescriptionListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/prescriptionDetailsFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.prescription.PrescriptionDetailsFragment"
+        android:label="fragment_prescription_details"
+        tools:layout="@layout/fragment_prescription_details" >
+        <action
+            android:id="@+id/action_prescriptionDetailsFragment_to_prescriptionListFragment"
+            app:destination="@id/prescriptionListFragment" />
     </fragment>
 </navigation>
