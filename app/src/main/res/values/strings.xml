@@ -100,4 +100,7 @@
     <string name="write_a_prescription">Write a prescription</string>
     <string name="submit">Submit</string>
     <string name="prescription_details">Prescription Details</string>
+    <string name="pathology_tests">Pathology Tests</string>
+    <string name="diagnostic_center">Diagnostic Center</string>
+    <string name="no_image">No Image Selected</string>
 </resources>
