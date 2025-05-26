@@ -19,6 +19,7 @@ class HomeFragment : Fragment() {
     val actionDoctor = Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_doctorFragment)
     val actionAppointment= Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_allSpecialtiesFragment)
     val actionPrescription= Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_prescriptionHomeFragment)
+    val actionReport= Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_reportHomeFragment)
     private lateinit var binding:FragmentHomeBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

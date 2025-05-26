@@ -7,7 +7,7 @@
 
         <variable
             name="model"
-            type="com.myapp.deshhospital.presentation.dashboard.prescription.PrescriptionHomeFragment" />
+            type="com.myapp.deshhospital.presentation.dashboard.report.ReportHomeFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -36,13 +36,13 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/appointmentText"
+                android:id="@+id/reportText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_35"
                 android:layout_marginTop="@dimen/margin_5"
                 android:layout_marginBottom="1dp"
-                android:text="@string/prescription"
+                android:text="@string/pathology_tests"
                 android:textAlignment="center"
                 android:textColor="@color/background"
                 android:textSize="@dimen/text_size_30"
@@ -58,7 +58,7 @@
             app:layout_constraintTop_toBottomOf="@+id/containerOne">
 
             <TextView
-                android:id="@+id/patientErrorTv"
+                android:id="@+id/testErrorTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_30"
@@ -82,7 +82,7 @@
                 android:textColorHint="@color/hint_text_color"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/patientErrorTv"
+                app:layout_constraintTop_toBottomOf="@+id/testErrorTv"
                 app:passwordToggleTint="@color/hint_text_color">
 
                 <com.google.android.material.textfield.TextInputEditText

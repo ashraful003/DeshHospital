@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.dashboard.admin.EmployeeFragment">
 
     <data>
 
         <variable
             name="model"
-            type="com.myapp.deshhospital.presentation.dashboard.prescription.PrescriptionHomeFragment" />
+            type="com.myapp.deshhospital.presentation.dashboard.report.AddReportFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -36,13 +37,13 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/appointmentText"
+                android:id="@+id/reportText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_35"
                 android:layout_marginTop="@dimen/margin_5"
                 android:layout_marginBottom="1dp"
-                android:text="@string/prescription"
+                android:text="New Tests Report"
                 android:textAlignment="center"
                 android:textColor="@color/background"
                 android:textSize="@dimen/text_size_30"
@@ -54,27 +55,21 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="@dimen/padding_20"
             app:layout_constraintTop_toBottomOf="@+id/containerOne">
 
-            <TextView
-                android:id="@+id/patientErrorTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_30"
-                android:layout_marginTop="@dimen/margin_20"
-                android:layout_marginRight="@dimen/margin_30"
-                android:text="@string/prescription_error_msg"
-                android:textAlignment="viewStart"
-                android:textColor="@color/red_500"
-                android:textSize="@dimen/text_size_14"
-                app:layout_constraintBottom_toTopOf="@+id/identity"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/reportUploadImage"
+                android:layout_width="@dimen/margin_120"
+                android:layout_height="@dimen/margin_120"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_uploading"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/identity"
+                android:id="@+id/diagnosticCenter"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_20"
@@ -82,37 +77,41 @@
                 android:textColorHint="@color/hint_text_color"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/patientErrorTv"
+                app:layout_constraintTop_toBottomOf="@+id/reportUploadImage"
                 app:passwordToggleTint="@color/hint_text_color">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/identityCardEt"
+                    android:id="@+id/diagnosticNameEt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:hint="@string/patient_nric_passport_no"
+                    android:hint="@string/diagnostic_center"
                     android:inputType="text"
                     android:paddingLeft="@dimen/padding_14"
                     android:textColor="@color/page_title_text_color"
-                    android:textSize="@dimen/text_size_17" />
+                    android:textSize="@dimen/text_size_15" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/btnPatientSearch"
+                android:id="@+id/btnReport"
                 style="@style/Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_50"
-                android:layout_marginTop="@dimen/margin_30"
+                android:layout_marginTop="@dimen/margin_25"
                 android:layout_marginRight="@dimen/margin_50"
-                android:backgroundTint="@color/colorPrimary"
-                android:enabled="false"
-                android:padding="@dimen/padding_14"
-                android:text="@string/search"
-                android:textSize="@dimen/text_size_15"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/identity" />
+                android:layout_marginLeft="@dimen/margin_50"
+                android:layout_weight="1"
+                android:background="@drawable/btn_primary_bg"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:padding="@dimen/padding_12"
+                android:text="@string/submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_17"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/diagnosticCenter" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

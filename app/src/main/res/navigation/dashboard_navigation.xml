@@ -18,6 +18,15 @@
         <action
             android:id="@+id/action_homeFragment_to_prescriptionHomeFragment"
             app:destination="@id/prescriptionHomeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_reportHomeFragment"
+            app:destination="@id/reportHomeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_reportListFragment"
+            app:destination="@id/reportListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_prescriptionListFragment"
+            app:destination="@id/prescriptionListFragment" />
     </fragment>
     <fragment
         android:id="@+id/doctorFragment"
@@ -144,6 +153,9 @@
         <action
             android:id="@+id/action_prescriptionListFragment_to_prescriptionDetailsFragment"
             app:destination="@id/prescriptionDetailsFragment" />
+        <action
+            android:id="@+id/action_prescriptionListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/addPrescriptionFragment"
@@ -162,5 +174,53 @@
         <action
             android:id="@+id/action_prescriptionDetailsFragment_to_prescriptionListFragment"
             app:destination="@id/prescriptionListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportHomeFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.report.ReportHomeFragment"
+        android:label="fragment_report_home"
+        tools:layout="@layout/fragment_report_home" >
+        <action
+            android:id="@+id/action_reportHomeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_reportHomeFragment_to_reportListFragment"
+            app:destination="@id/reportListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportListFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.report.ReportListFragment"
+        android:label="fragment_report_list"
+        tools:layout="@layout/fragment_report_list" >
+        <action
+            android:id="@+id/action_reportListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_reportListFragment_to_reportDetailsFragment"
+            app:destination="@id/reportDetailsFragment" />
+        <action
+            android:id="@+id/action_reportListFragment_to_addReportFragment"
+            app:destination="@id/addReportFragment" />
+        <action
+            android:id="@+id/action_reportListFragment_to_reportHomeFragment"
+            app:destination="@id/reportHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportDetailsFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.report.ReportDetailsFragment"
+        android:label="fragment_report_details"
+        tools:layout="@layout/fragment_report_details" >
+        <action
+            android:id="@+id/action_reportDetailsFragment_to_reportListFragment"
+            app:destination="@id/reportListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addReportFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.report.AddReportFragment"
+        android:label="fragment_add_report"
+        tools:layout="@layout/fragment_add_report" >
+        <action
+            android:id="@+id/action_addReportFragment_to_reportListFragment"
+            app:destination="@id/reportListFragment" />
     </fragment>
 </navigation>
