@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.myapp.deshhospital.presentation.dashboard.discharge.AddDischargeListFragment" />
+    </data>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/purple_700"
+                android:paddingBottom="@dimen/padding_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/backIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_11"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:background="@drawable/ic_back"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/dischargeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_35"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/create_discharge"
+                    android:textAlignment="center"
+                    android:textColor="@color/background"
+                    android:textSize="@dimen/text_size_30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/backIv"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/containerOne"
+                android:background="@color/background">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    app:layout_constraintBottom_toBottomOf="parent">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/disIdentity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:background="@drawable/rounded_edittext_bg"
+                        android:textColorHint="@color/hint_text_color"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:passwordToggleTint="@color/hint_text_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/disIdentityEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/patient_identity"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/padding_14"
+                            android:textColor="@color/page_title_text_color"
+                            android:textSize="@dimen/text_size_15" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/disName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:background="@drawable/rounded_edittext_bg"
+                        android:textColorHint="@color/hint_text_color"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/disIdentity"
+                        app:passwordToggleTint="@color/hint_text_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/disNameEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/full_name"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/padding_14"
+                            android:textColor="@color/page_title_text_color"
+                            android:textSize="@dimen/text_size_15" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/disAge"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:background="@drawable/rounded_edittext_bg"
+                        android:textColorHint="@color/hint_text_color"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/disName"
+                        app:passwordToggleTint="@color/hint_text_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/disAgeEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/ages"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/padding_14"
+                            android:textColor="@color/page_title_text_color"
+                            android:textSize="@dimen/text_size_15" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/disSex"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:background="@drawable/rounded_edittext_bg"
+                        android:textColorHint="@color/hint_text_color"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/disAge"
+                        app:passwordToggleTint="@color/hint_text_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/disSexEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/sex"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/padding_14"
+                            android:textColor="@color/page_title_text_color"
+                            android:textSize="@dimen/text_size_15" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/disAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:background="@drawable/rounded_edittext_bg"
+                        android:textColorHint="@color/hint_text_color"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/disSex"
+                        app:passwordToggleTint="@color/hint_text_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/disAddressEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/address"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/padding_14"
+                            android:textColor="@color/page_title_text_color"
+                            android:textSize="@dimen/text_size_15" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/disWard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:background="@drawable/rounded_edittext_bg"
+                        android:textColorHint="@color/hint_text_color"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/disAddress"
+                        app:passwordToggleTint="@color/hint_text_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/disWardEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/ward_bed_no"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/padding_14"
+                            android:textColor="@color/page_title_text_color"
+                            android:textSize="@dimen/text_size_15" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/disConsultant"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:background="@drawable/rounded_edittext_bg"
+                        android:textColorHint="@color/hint_text_color"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/disWard"
+                        app:passwordToggleTint="@color/hint_text_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/disConsultantEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/consultant"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/padding_14"
+                            android:textColor="@color/page_title_text_color"
+                            android:textSize="@dimen/text_size_15" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/disAdmissionDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:background="@drawable/rounded_edittext_bg"
+                        android:textColorHint="@color/hint_text_color"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/disConsultant"
+                        app:passwordToggleTint="@color/hint_text_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/disAdmissionDateEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/admission_date"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/padding_14"
+                            android:textColor="@color/page_title_text_color"
+                            android:textSize="@dimen/text_size_15" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/disSurgeryDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:background="@drawable/rounded_edittext_bg"
+                        android:textColorHint="@color/hint_text_color"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/disAdmissionDate"
+                        app:passwordToggleTint="@color/hint_text_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/disSurgeryDateEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/surgery_date"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/padding_14"
+                            android:textColor="@color/page_title_text_color"
+                            android:textSize="@dimen/text_size_15" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/disDischargeDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:background="@drawable/rounded_edittext_bg"
+                        android:textColorHint="@color/hint_text_color"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/disSurgeryDate"
+                        app:passwordToggleTint="@color/hint_text_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/disDischargeDateEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/discharge_date"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/padding_14"
+                            android:textColor="@color/page_title_text_color"
+                            android:textSize="@dimen/text_size_15" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/disDiagnosis"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:background="@drawable/rounded_edittext_bg"
+                        android:textColorHint="@color/hint_text_color"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/disDischargeDate"
+                        app:passwordToggleTint="@color/hint_text_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/disDiagnosisEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/diagnosis"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/padding_14"
+                            android:textColor="@color/page_title_text_color"
+                            android:textSize="@dimen/text_size_15" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/disSurgeryInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:background="@drawable/rounded_edittext_bg"
+                        android:textColorHint="@color/hint_text_color"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/disDiagnosis"
+                        app:passwordToggleTint="@color/hint_text_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/disSurgeryInfoEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/surgery_info"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/padding_14"
+                            android:textColor="@color/page_title_text_color"
+                            android:textSize="@dimen/text_size_15" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/disComplaints"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:background="@drawable/rounded_edittext_bg"
+                        android:textColorHint="@color/hint_text_color"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/disSurgeryInfo"
+                        app:passwordToggleTint="@color/hint_text_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/disComplaintsEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/complaints"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/padding_14"
+                            android:textColor="@color/page_title_text_color"
+                            android:textSize="@dimen/text_size_15" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/disOtherComplaints"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:background="@drawable/rounded_edittext_bg"
+                        android:textColorHint="@color/hint_text_color"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/disComplaints"
+                        app:passwordToggleTint="@color/hint_text_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/disOtherComplaintsEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/other_complaints"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/padding_14"
+                            android:textColor="@color/page_title_text_color"
+                            android:textSize="@dimen/text_size_15" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <Button
+                        android:id="@+id/disContinueButton"
+                        style="@style/Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_35"
+                        android:layout_marginBottom="@dimen/margin_70"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:padding="@dimen/padding_14"
+                        android:text="@string/btn_continue"
+                        android:textSize="@dimen/text_size_15"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/disOtherComplaints"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

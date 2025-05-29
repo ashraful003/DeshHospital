@@ -36,6 +36,7 @@
     <string name="health_screening">My Health Screening Results</string>
     <string name="in_patient_bill">Inpatient Bill Status</string>
     <string name="in_patient_discharge">Inpatient Discharge Status</string>
+    <string name="in_patient">Inpatient Discharge</string>
     <string name="change_password">Change Password</string>
     <string name="logout">Logout</string>
     <string name="open">Open</string>
@@ -103,4 +104,23 @@
     <string name="pathology_tests">Pathology Tests</string>
     <string name="diagnostic_center">Diagnostic Center</string>
     <string name="no_image">No Image Selected</string>
+    <string name="inpatient_discharge_status">Inpatient Discharge Status</string>
+    <string name="discharge_summary">Discharge Summary</string>
+    <string name="department">Department</string>
+    <string name="general_information">GENERAL INFORMATION</string>
+    <string name="patient_identity">Patient Identity</string>
+    <string name="ages">Age</string>
+    <string name="sex">Sex</string>
+    <string name="ward_bed_no">Ward/Bed no</string>
+    <string name="consultant">Consultant</string>
+    <string name="admission_date">Admission Date</string>
+    <string name="surgery_date">Surgery Date</string>
+    <string name="discharge_date">Discharge Date</string>
+    <string name="surgery_info">Surgery Info</string>
+    <string name="diagnosis">Diagnosis</string>
+    <string name="names">Name</string>
+    <string name="history_of_present_illness">History of Present Illness</string>
+    <string name="complaints">Complaints</string>
+    <string name="other_complaints">Other complaints</string>
+    <string name="create_discharge">Create Discharge</string>
 </resources>

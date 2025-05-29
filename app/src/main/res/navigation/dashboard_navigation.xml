@@ -22,11 +22,11 @@
             android:id="@+id/action_homeFragment_to_reportHomeFragment"
             app:destination="@id/reportHomeFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_reportListFragment"
-            app:destination="@id/reportListFragment" />
-        <action
             android:id="@+id/action_homeFragment_to_prescriptionListFragment"
             app:destination="@id/prescriptionListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_dischargeHomeFragment"
+            app:destination="@id/dischargeHomeFragment" />
     </fragment>
     <fragment
         android:id="@+id/doctorFragment"
@@ -193,9 +193,6 @@
         android:label="fragment_report_list"
         tools:layout="@layout/fragment_report_list" >
         <action
-            android:id="@+id/action_reportListFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-        <action
             android:id="@+id/action_reportListFragment_to_reportDetailsFragment"
             app:destination="@id/reportDetailsFragment" />
         <action
@@ -222,5 +219,50 @@
         <action
             android:id="@+id/action_addReportFragment_to_reportListFragment"
             app:destination="@id/reportListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dischargeHomeFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.discharge.DischargeHomeFragment"
+        android:label="fragment_discharge_home"
+        tools:layout="@layout/fragment_discharge_home" >
+        <action
+            android:id="@+id/action_dischargeHomeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_dischargeHomeFragment_to_dischargeListFragment"
+            app:destination="@id/dischargeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addDischargeListFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.discharge.AddDischargeListFragment"
+        android:label="fragment_add_discharge_list"
+        tools:layout="@layout/fragment_add_discharge_list" >
+        <action
+            android:id="@+id/action_addDischargeListFragment_to_dischargeListFragment"
+            app:destination="@id/dischargeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dischargeListFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.discharge.DischargeListFragment"
+        android:label="fragment_discharge_list"
+        tools:layout="@layout/fragment_discharge_list" >
+        <action
+            android:id="@+id/action_dischargeListFragment_to_dischargeHomeFragment"
+            app:destination="@id/dischargeHomeFragment" />
+        <action
+            android:id="@+id/action_dischargeListFragment_to_dischargeInfoDetailsFragment"
+            app:destination="@id/dischargeInfoDetailsFragment" />
+        <action
+            android:id="@+id/action_dischargeListFragment_to_addDischargeListFragment"
+            app:destination="@id/addDischargeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dischargeInfoDetailsFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.discharge.DischargeInfoDetailsFragment"
+        android:label="fragment_discharge_info_details"
+        tools:layout="@layout/fragment_discharge_info_details" >
+        <action
+            android:id="@+id/action_dischargeInfoDetailsFragment_to_dischargeListFragment"
+            app:destination="@id/dischargeListFragment" />
     </fragment>
 </navigation>
