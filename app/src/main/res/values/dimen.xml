@@ -57,6 +57,8 @@
     <dimen name="layout_1">1dp</dimen>
     <dimen name="layout_400">400dp</dimen>
     <dimen name="layout_130">130dp</dimen>
+    <dimen name="layout_100">100dp</dimen>
+    <dimen name="layout_115">115dp</dimen>
 
     //radius
     <dimen name="card_radius_20">20dp</dimen>
