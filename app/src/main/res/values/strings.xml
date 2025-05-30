@@ -123,4 +123,14 @@
     <string name="complaints">Complaints</string>
     <string name="other_complaints">Other complaints</string>
     <string name="create_discharge">Create Discharge</string>
+    <string name="admission">Admission</string>
+    <string name="new_patient">New Patient</string>
+    <string name="add_patient">Add Patient</string>
+    <string name="patient_details">Patient Details</string>
+    <string name="problem">Problem</string>
+    <string name="emergency_contact">Emergency Contact</string>
+    <string name="nric_passport">NRIC/Passport</string>
+    <string name="relation">Relation</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
 </resources>

@@ -21,12 +21,12 @@ class HomeFragment : Fragment() {
     val actionPrescription= Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_prescriptionHomeFragment)
     val actionReport= Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_reportHomeFragment)
     val actionDischarge= Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_dischargeHomeFragment)
+    val actionAdmission= Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_admissionListFragment)
     private lateinit var binding:FragmentHomeBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_home, container, false)
         binding.model = this
         activityUtil.hideBottomNavigation(false)

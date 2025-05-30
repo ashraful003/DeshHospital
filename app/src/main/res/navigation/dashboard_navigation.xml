@@ -27,6 +27,9 @@
         <action
             android:id="@+id/action_homeFragment_to_dischargeHomeFragment"
             app:destination="@id/dischargeHomeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_admissionListFragment"
+            app:destination="@id/admissionListFragment" />
     </fragment>
     <fragment
         android:id="@+id/doctorFragment"
@@ -264,5 +267,50 @@
         <action
             android:id="@+id/action_dischargeInfoDetailsFragment_to_dischargeListFragment"
             app:destination="@id/dischargeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/admissionListFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.admission.AdmissionListFragment"
+        android:label="fragment_admission_list"
+        tools:layout="@layout/fragment_admission_list" >
+        <action
+            android:id="@+id/action_admissionListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_admissionListFragment_to_addPatientFragment"
+            app:destination="@id/addPatientFragment" />
+        <action
+            android:id="@+id/action_admissionListFragment_to_admissionPatientDetailsFragment"
+            app:destination="@id/admissionPatientDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPatientFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.admission.AddPatientFragment"
+        android:label="fragment_add_patient"
+        tools:layout="@layout/fragment_add_patient" >
+        <action
+            android:id="@+id/action_addPatientFragment_to_admissionListFragment"
+            app:destination="@id/admissionListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/admissionPatientDetailsFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.admission.AdmissionPatientDetailsFragment"
+        android:label="fragment_admission_patient_details"
+        tools:layout="@layout/fragment_admission_patient_details" >
+        <action
+            android:id="@+id/action_admissionPatientDetailsFragment_to_admissionListFragment"
+            app:destination="@id/admissionListFragment" />
+        <action
+            android:id="@+id/action_admissionPatientDetailsFragment_to_updatePatientInfoFragment"
+            app:destination="@id/updatePatientInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updatePatientInfoFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.admission.UpdatePatientInfoFragment"
+        android:label="fragment_update_patient_info"
+        tools:layout="@layout/fragment_update_patient_info" >
+        <action
+            android:id="@+id/action_updatePatientInfoFragment_to_admissionPatientDetailsFragment"
+            app:destination="@id/admissionPatientDetailsFragment" />
     </fragment>
 </navigation>
