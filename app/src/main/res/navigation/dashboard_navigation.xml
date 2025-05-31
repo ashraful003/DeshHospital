@@ -30,6 +30,9 @@
         <action
             android:id="@+id/action_homeFragment_to_admissionListFragment"
             app:destination="@id/admissionListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_emergencyContactFragment"
+            app:destination="@id/emergencyContactFragment" />
     </fragment>
     <fragment
         android:id="@+id/doctorFragment"
@@ -312,5 +315,14 @@
         <action
             android:id="@+id/action_updatePatientInfoFragment_to_admissionPatientDetailsFragment"
             app:destination="@id/admissionPatientDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/emergencyContactFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.emergency.EmergencyContactFragment"
+        android:label="fragment_emergency_contact"
+        tools:layout="@layout/fragment_emergency_contact" >
+        <action
+            android:id="@+id/action_emergencyContactFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

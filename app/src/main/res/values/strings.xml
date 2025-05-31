@@ -133,4 +133,8 @@
     <string name="relation">Relation</string>
     <string name="save">Save</string>
     <string name="edit">Edit</string>
+    <string name="chat_with_our_specialist">Chat with our Specialist</string>
+    <string name="press_here_to_call">Press here to call</string>
+    <string name="_24_7_hrs_service">24/7 Hrs Service</string>
+    <string name="_24_hrs_emergency_service">24 Hrs Emergency Service</string>
 </resources>
