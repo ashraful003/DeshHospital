@@ -135,6 +135,13 @@
     <string name="edit">Edit</string>
     <string name="chat_with_our_specialist">Chat with our Specialist</string>
     <string name="press_here_to_call">Press here to call</string>
-    <string name="_24_7_hrs_service">24/7 Hrs Service</string>
+    <string name="_24_7_hrs_service">24/7 Hrs service</string>
     <string name="_24_hrs_emergency_service">24 Hrs Emergency Service</string>
+    <string name="blood_donor">Blood Donor</string>
+    <string name="area">Area</string>
+    <string name="registration">Registration as a Donor</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="donation_status">Donation Status</string>
+    <string name="donor_information">Donor Information</string>
+    <string name="update_donor_info">Update Donor Info</string>
 </resources>
