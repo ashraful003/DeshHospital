@@ -22,6 +22,7 @@ class HomeFragment : Fragment() {
     val actionReport= Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_reportHomeFragment)
     val actionDischarge= Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_dischargeHomeFragment)
     val actionAdmission= Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_admissionListFragment)
+    val actionEmergency= Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_emergencyContactFragment)
     private lateinit var binding:FragmentHomeBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
