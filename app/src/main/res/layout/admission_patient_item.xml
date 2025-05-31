@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/dischargeCard"
+    android:id="@+id/admissionCard"
     android:layout_marginTop="@dimen/margin_4"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -13,7 +13,7 @@
         android:paddingBottom="@dimen/padding_12">
 
         <TextView
-            android:id="@+id/disDateTv"
+            android:id="@+id/admissionDateTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_14"
@@ -28,17 +28,17 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/dicDoctorNameTv"
+            android:id="@+id/addPatientIdentityTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp"
-            android:text="@string/full_name"
+            android:text="@string/nric_passport"
             android:textAlignment="center"
             android:textColor="@color/black_400"
             android:textSize="@dimen/text_size_17"
             android:textStyle="bold"
             app:layout_constraintRight_toLeftOf="@+id/nextSignIv"
-            app:layout_constraintLeft_toRightOf="@+id/disDateTv"
+            app:layout_constraintLeft_toRightOf="@+id/admissionDateTv"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -48,7 +48,7 @@
             android:layout_height="@dimen/margin_35"
             android:src="@drawable/ic_right"
             android:layout_marginRight="@dimen/margin_12"
-            app:layout_constraintRight_toLeftOf="@+id/dicDoctorNameTv"
+            app:layout_constraintRight_toLeftOf="@+id/adPatientIdentityTv"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
