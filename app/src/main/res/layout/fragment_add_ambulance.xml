@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.myapp.deshhospital.presentation.dashboard.ambulance.AddAmbulanceFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_700"
+            android:paddingBottom="@dimen/padding_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/backIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_11"
+                android:layout_marginTop="@dimen/margin_12"
+                android:background="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dischargeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_35"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginBottom="1dp"
+                android:text="@string/add_new_ambulance"
+                android:textAlignment="center"
+                android:textColor="@color/background"
+                android:textSize="@dimen/text_size_30"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/backIv"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/containerOne"
+            android:background="@color/background">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/addAmbulanceLicence"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:background="@drawable/rounded_edittext_bg"
+                    android:textColorHint="@color/hint_text_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:passwordToggleTint="@color/hint_text_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/addAmbulanceLicenceEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/ambulance_licence"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/padding_14"
+                        android:textColor="@color/page_title_text_color"
+                        android:textSize="@dimen/text_size_15" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/addAmbulanceName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:background="@drawable/rounded_edittext_bg"
+                    android:textColorHint="@color/hint_text_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addAmbulanceLicence"
+                    app:passwordToggleTint="@color/hint_text_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/addAmbulanceNameEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/ambulance_name"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/padding_14"
+                        android:textColor="@color/page_title_text_color"
+                        android:textSize="@dimen/text_size_15" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/addAmbulanceArea"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:background="@drawable/rounded_edittext_bg"
+                    android:textColorHint="@color/hint_text_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addAmbulanceName"
+                    app:passwordToggleTint="@color/hint_text_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/addAmbulanceAreaEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/area"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/padding_14"
+                        android:textColor="@color/page_title_text_color"
+                        android:textSize="@dimen/text_size_15" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/addAmbulanceDriverName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:background="@drawable/rounded_edittext_bg"
+                    android:textColorHint="@color/hint_text_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addAmbulanceArea"
+                    app:passwordToggleTint="@color/hint_text_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/addAmbulanceDriverNameEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/driver_name"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/padding_14"
+                        android:textColor="@color/page_title_text_color"
+                        android:textSize="@dimen/text_size_15" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/addAmbulanceDrivingLicence"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:background="@drawable/rounded_edittext_bg"
+                    android:textColorHint="@color/hint_text_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addAmbulanceDriverName"
+                    app:passwordToggleTint="@color/hint_text_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/addAmbulanceDrivingLicenceEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/driving_licence"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/padding_14"
+                        android:textColor="@color/page_title_text_color"
+                        android:textSize="@dimen/text_size_15" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/addAmbulanceDriverAge"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:background="@drawable/rounded_edittext_bg"
+                    android:textColorHint="@color/hint_text_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addAmbulanceDrivingLicence"
+                    app:passwordToggleTint="@color/hint_text_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/addAmbulanceDriverAgeEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/driver_age"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/padding_14"
+                        android:textColor="@color/page_title_text_color"
+                        android:textSize="@dimen/text_size_15" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/addAmbulanceDriverDob"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:background="@drawable/rounded_edittext_bg"
+                    android:textColorHint="@color/hint_text_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addAmbulanceDriverAge"
+                    app:passwordToggleTint="@color/hint_text_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/addAmbulanceDriverDobEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/date_of_birth"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/padding_14"
+                        android:textColor="@color/page_title_text_color"
+                        android:textSize="@dimen/text_size_15" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/addAmbulancePhone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:background="@drawable/rounded_edittext_bg"
+                    android:textColorHint="@color/hint_text_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addAmbulanceDriverDob"
+                    app:passwordToggleTint="@color/hint_text_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/addAmbulancePhoneEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/phone_number"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/padding_14"
+                        android:textColor="@color/page_title_text_color"
+                        android:textSize="@dimen/text_size_15" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/addAmbulanceButton"
+                    style="@style/Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_35"
+                    android:layout_marginBottom="@dimen/margin_70"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:padding="@dimen/padding_14"
+                    android:text="@string/submit"
+                    android:textSize="@dimen/text_size_15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addAmbulancePhone"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

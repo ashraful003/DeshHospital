@@ -36,6 +36,9 @@
         <action
             android:id="@+id/action_homeFragment_to_bloodDonorListFragment"
             app:destination="@id/bloodDonorListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_ambulanceListFragment"
+            app:destination="@id/ambulanceListFragment" />
     </fragment>
     <fragment
         android:id="@+id/doctorFragment"
@@ -372,5 +375,50 @@
         <action
             android:id="@+id/action_updateDonorInfoFragment_to_bloodDonorListFragment"
             app:destination="@id/bloodDonorListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ambulanceListFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.ambulance.AmbulanceListFragment"
+        android:label="fragment_ambulance_list"
+        tools:layout="@layout/fragment_ambulance_list" >
+        <action
+            android:id="@+id/action_ambulanceListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_ambulanceListFragment_to_addAmbulanceFragment"
+            app:destination="@id/addAmbulanceFragment" />
+        <action
+            android:id="@+id/action_ambulanceListFragment_to_ambulanceDetailsFragment"
+            app:destination="@id/ambulanceDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ambulanceDetailsFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.ambulance.AmbulanceDetailsFragment"
+        android:label="fragment_ambulance_details"
+        tools:layout="@layout/fragment_ambulance_details" >
+        <action
+            android:id="@+id/action_ambulanceDetailsFragment_to_ambulanceListFragment"
+            app:destination="@id/ambulanceListFragment" />
+        <action
+            android:id="@+id/action_ambulanceDetailsFragment_to_updateAmbulanceInfoFragment"
+            app:destination="@id/updateAmbulanceInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAmbulanceFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.ambulance.AddAmbulanceFragment"
+        android:label="fragment_add_ambulance"
+        tools:layout="@layout/fragment_add_ambulance" >
+        <action
+            android:id="@+id/action_addAmbulanceFragment_to_ambulanceListFragment"
+            app:destination="@id/ambulanceListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateAmbulanceInfoFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.ambulance.UpdateAmbulanceInfoFragment"
+        android:label="fragment_update_ambulance_info"
+        tools:layout="@layout/fragment_update_ambulance_info" >
+        <action
+            android:id="@+id/action_updateAmbulanceInfoFragment_to_ambulanceListFragment"
+            app:destination="@id/ambulanceListFragment" />
     </fragment>
 </navigation>

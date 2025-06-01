@@ -144,4 +144,13 @@
     <string name="donation_status">Donation Status</string>
     <string name="donor_information">Donor Information</string>
     <string name="update_donor_info">Update Donor Info</string>
+    <string name="ambulance_list">Ambulance List</string>
+    <string name="ambulance_licence">Ambulance Licence</string>
+    <string name="ambulance_name">Ambulance Name</string>
+    <string name="driver_name">Driver Name</string>
+    <string name="driving_licence">Driving Licence</string>
+    <string name="driver_age">Driver Age</string>
+    <string name="ambulance_information">Ambulance Information</string>
+    <string name="add_new_ambulance">Add New Ambulance</string>
+    <string name="update_ambulance_info">Update Ambulance Info</string>
 </resources>
