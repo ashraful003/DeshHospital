@@ -34,6 +34,7 @@
     <dimen name="margin_170">170dp</dimen>
     <dimen name="margin_220">220dp</dimen>
     <dimen name="margin_24">24dp</dimen>
+    <dimen name="margin_13">13dp</dimen>
 
     //text_size
     <dimen name="text_size_30">30sp</dimen>
@@ -46,6 +47,7 @@
     <dimen name="text_size_14">14sp</dimen>
     <dimen name="text_size_22">22sp</dimen>
     <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
 
     //layout
     <dimen name="width_8">8dp</dimen>
@@ -64,11 +66,18 @@
     <dimen name="layout_90">90dp</dimen>
     <dimen name="layout_30">30dp</dimen>
     <dimen name="layout_17">17dp</dimen>
+    <dimen name="height_117">117dp</dimen>
+    <dimen name="width_40">40dp</dimen>
+    <dimen name="height_40">40dp</dimen>
+    <dimen name="layout_150">150dp</dimen>
+    <dimen name="layout_20">20dp</dimen>
 
     //radius
     <dimen name="card_radius_20">20dp</dimen>
     <dimen name="radius_15">15dp</dimen>
     <dimen name="radius_8">8dp</dimen>
+    <dimen name="radius_10">10dp</dimen>
+    <dimen name="radius_30">30dp</dimen>
 
     //padding
     <dimen name="padding_bottom_74">74dp</dimen>
@@ -81,5 +90,6 @@
     <dimen name="padding_20">20dp</dimen>
     <dimen name="padding_10">10dp</dimen>
     <dimen name="padding_17">17dp</dimen>
+    <dimen name="padding_25">25dp</dimen>
 
 </resources>

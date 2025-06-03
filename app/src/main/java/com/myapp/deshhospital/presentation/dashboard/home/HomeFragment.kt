@@ -6,8 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import com.myapp.deshhospital.R
 import com.myapp.deshhospital.databinding.FragmentHomeBinding
+import com.myapp.deshhospital.presentation.dashboard.adapter.MedicineAdapter
+import com.myapp.deshhospital.presentation.dashboard.adapter.PrescriptionAdapter
+import com.myapp.deshhospital.presentation.model.Medicine
+import com.myapp.deshhospital.presentation.model.Prescription
 import com.myapp.deshhospital.util.DHActivityUtil
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -25,6 +31,8 @@ class HomeFragment : Fragment() {
     val actionEmergency= Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_emergencyContactFragment)
     val actionBlood= Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_bloodDonorListFragment)
     val actionAmbulance= Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_ambulanceListFragment)
+    val actionPharmaceutical= Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_pharmaceuticalListFragment)
+    val actionMedicineStore= Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_pharmaceuticalActivityFragment)
     private lateinit var binding:FragmentHomeBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,6 +42,7 @@ class HomeFragment : Fragment() {
         binding.model = this
         activityUtil.hideBottomNavigation(false)
         activityUtil.hideDrawerNavigation(false)
+
         return binding.root
     }
 }
