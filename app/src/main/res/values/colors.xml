@@ -23,4 +23,9 @@
     <color name="black_200">#a6a6a6</color>
     <color name="sky_blue">#80b3ff</color>
     <color name="black_300">#dae3f1</color>
+    <color name="black_600">#4d4d4d</color>
+    <color name="red_100">#ffcccc</color>
+    <color name="offwhite">#d9d9d9</color>
+    <color name="text_hint">#1a1a1a</color>
+    <color name="text_color">#8F9BB3</color>
 </resources>

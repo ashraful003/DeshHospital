@@ -39,6 +39,12 @@
         <action
             android:id="@+id/action_homeFragment_to_ambulanceListFragment"
             app:destination="@id/ambulanceListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_pharmaceuticalListFragment"
+            app:destination="@id/pharmaceuticalListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_pharmaceuticalActivityFragment"
+            app:destination="@id/pharmaceuticalActivityFragment2" />
     </fragment>
     <fragment
         android:id="@+id/doctorFragment"
@@ -420,5 +426,182 @@
         <action
             android:id="@+id/action_updateAmbulanceInfoFragment_to_ambulanceListFragment"
             app:destination="@id/ambulanceListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pharmaceuticalListFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.pharmaceutical.PharmaceuticalListFragment"
+        android:label="fragment_pharmaceutical_list"
+        tools:layout="@layout/fragment_pharmaceutical_list" >
+        <action
+            android:id="@+id/action_pharmaceuticalListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_pharmaceuticalListFragment_to_addPharmaceuticalFragment"
+            app:destination="@id/addPharmaceuticalFragment" />
+        <action
+            android:id="@+id/action_pharmaceuticalListFragment_to_pharmaceuticalDetailsFragment"
+            app:destination="@id/pharmaceuticalDetailsFragment" />
+        <action
+            android:id="@+id/action_pharmaceuticalListFragment_to_pharmaceuticalActivityFragment"
+            app:destination="@id/pharmaceuticalActivityFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPharmaceuticalFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.pharmaceutical.AddPharmaceuticalFragment"
+        android:label="fragment_add_pharmaceutical"
+        tools:layout="@layout/fragment_add_pharmaceutical" >
+        <action
+            android:id="@+id/action_addPharmaceuticalFragment_to_pharmaceuticalListFragment"
+            app:destination="@id/pharmaceuticalListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pharmaceuticalDetailsFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.pharmaceutical.PharmaceuticalDetailsFragment"
+        android:label="fragment_pharmaceutical_details"
+        tools:layout="@layout/fragment_pharmaceutical_details" >
+        <action
+            android:id="@+id/action_pharmaceuticalDetailsFragment_to_pharmaceuticalListFragment"
+            app:destination="@id/pharmaceuticalListFragment" />
+        <action
+            android:id="@+id/action_pharmaceuticalDetailsFragment_to_updatePharmaceuticalInfoFragment"
+            app:destination="@id/updatePharmaceuticalInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updatePharmaceuticalInfoFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.pharmaceutical.UpdatePharmaceuticalInfoFragment"
+        android:label="fragment_update_pharmaceutical_info"
+        tools:layout="@layout/fragment_update_pharmaceutical_info" >
+        <action
+            android:id="@+id/action_updatePharmaceuticalInfoFragment_to_pharmaceuticalDetailsFragment"
+            app:destination="@id/pharmaceuticalDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/expireMedicineFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.pharmaceutical.ExpireMedicineFragment"
+        android:label="fragment_expire_medicine"
+        tools:layout="@layout/fragment_expire_medicine" >
+        <action
+            android:id="@+id/action_expireMedicineFragment_to_pharmaceuticalActivityFragment"
+            app:destination="@id/pharmaceuticalActivityFragment2" />
+        <action
+            android:id="@+id/action_expireMedicineFragment_to_expireMedicineDetailsFragment"
+            app:destination="@id/expireMedicineDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMedicineFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.pharmaceutical.AddMedicineFragment"
+        android:label="fragment_add_medicine"
+        tools:layout="@layout/fragment_add_medicine" >
+        <action
+            android:id="@+id/action_addMedicineFragment_to_medicineListFragment"
+            app:destination="@id/medicineListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicineListFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.pharmaceutical.MedicineListFragment"
+        android:label="fragment_medicine_list"
+        tools:layout="@layout/fragment_medicine_list" >
+        <action
+            android:id="@+id/action_medicineListFragment_to_medicineDetailsFragment"
+            app:destination="@id/medicineDetailsFragment" />
+        <action
+            android:id="@+id/action_medicineListFragment_to_pharmaceuticalActivityFragment"
+            app:destination="@id/pharmaceuticalActivityFragment2" />
+        <action
+            android:id="@+id/action_medicineListFragment_to_addMedicineFragment"
+            app:destination="@id/addMedicineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicineDetailsFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.pharmaceutical.MedicineDetailsFragment"
+        android:label="fragment_medicine_details"
+        tools:layout="@layout/fragment_medicine_details" >
+        <action
+            android:id="@+id/action_medicineDetailsFragment_to_medicineListFragment"
+            app:destination="@id/medicineListFragment" />
+        <action
+            android:id="@+id/action_medicineDetailsFragment_to_updateMedicineInfoFragment"
+            app:destination="@id/updateMedicineInfoFragment" />
+        <action
+            android:id="@+id/action_medicineDetailsFragment_to_pharmaceuticalActivityFragment"
+            app:destination="@id/pharmaceuticalActivityFragment2" />
+        <action
+            android:id="@+id/action_medicineDetailsFragment_to_expireMedicineFragment"
+            app:destination="@id/expireMedicineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateMedicineInfoFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.pharmaceutical.UpdateMedicineInfoFragment"
+        android:label="fragment_update_medicine_info"
+        tools:layout="@layout/fragment_update_medicine_info" >
+        <action
+            android:id="@+id/action_updateMedicineInfoFragment_to_medicineListFragment"
+            app:destination="@id/medicineListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEmployeeFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.pharmaceutical.AddEmployeeFragment"
+        android:label="fragment_add_employee"
+        tools:layout="@layout/fragment_add_employee" >
+        <action
+            android:id="@+id/action_addEmployeeFragment_to_employeeListFragment"
+            app:destination="@id/employeeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/employeeListFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.pharmaceutical.EmployeeListFragment"
+        android:label="fragment_employee_list"
+        tools:layout="@layout/fragment_employee_list" >
+        <action
+            android:id="@+id/action_employeeListFragment_to_employeeDetailsFragment"
+            app:destination="@id/employeeDetailsFragment" />
+        <action
+            android:id="@+id/action_employeeListFragment_to_addEmployeeFragment"
+            app:destination="@id/addEmployeeFragment" />
+        <action
+            android:id="@+id/action_employeeListFragment_to_pharmaceuticalActivityFragment"
+            app:destination="@id/pharmaceuticalActivityFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/employeeDetailsFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.pharmaceutical.EmployeeDetailsFragment"
+        android:label="fragment_employee_details"
+        tools:layout="@layout/fragment_employee_details" >
+        <action
+            android:id="@+id/action_employeeDetailsFragment_to_employeeListFragment"
+            app:destination="@id/employeeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pharmaceuticalActivityFragment2"
+        android:name="com.myapp.deshhospital.presentation.dashboard.pharmaceutical.PharmaceuticalActivityFragment"
+        android:label="fragment_pharmaceutical_activity"
+        tools:layout="@layout/fragment_pharmaceutical_activity" >
+        <action
+            android:id="@+id/action_pharmaceuticalActivityFragment_to_expireMedicineFragment"
+            app:destination="@id/expireMedicineFragment" />
+        <action
+            android:id="@+id/action_pharmaceuticalActivityFragment2_to_pharmaceuticalListFragment"
+            app:destination="@id/pharmaceuticalListFragment" />
+        <action
+            android:id="@+id/action_pharmaceuticalActivityFragment_to_employeeListFragment"
+            app:destination="@id/employeeListFragment" />
+        <action
+            android:id="@+id/action_pharmaceuticalActivityFragment_to_medicineListFragment"
+            app:destination="@id/medicineListFragment" />
+        <action
+            android:id="@+id/action_pharmaceuticalActivityFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_pharmaceuticalActivityFragment_to_medicineDetailsFragment"
+            app:destination="@id/medicineDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/expireMedicineDetailsFragment"
+        android:name="com.myapp.deshhospital.presentation.dashboard.pharmaceutical.ExpireMedicineDetailsFragment"
+        android:label="fragment_expire_medicine_details"
+        tools:layout="@layout/fragment_expire_medicine_details" >
+        <action
+            android:id="@+id/action_expireMedicineDetailsFragment_to_expireMedicineFragment"
+            app:destination="@id/expireMedicineFragment" />
     </fragment>
 </navigation>
