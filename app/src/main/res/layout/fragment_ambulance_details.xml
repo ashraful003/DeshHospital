@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.myapp.deshhospital.presentation.dashboard.ambulance.AmbulanceDetailsFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_700"
+            android:paddingBottom="@dimen/padding_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/backIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_11"
+                android:layout_marginTop="@dimen/margin_12"
+                android:background="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/ambulanceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_35"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginBottom="1dp"
+                android:text="@string/ambulance_information"
+                android:textAlignment="center"
+                android:textColor="@color/background"
+                android:textSize="@dimen/text_size_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/backIv"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/updateAmbulanceInfo"
+                android:layout_width="@dimen/layout_30"
+                android:layout_height="@dimen/layout_17"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginRight="@dimen/margin_16"
+                android:text="@string/edit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_17"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/ambulanceText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/containerOne">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_11">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ambulanceLicenceLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/ambulanceLicence"
+                            android:layout_width="@dimen/layout_130"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ambulance_licence"
+                            android:textColor="@color/black_400"
+                            android:textSize="@dimen/text_size_15"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/ambulanceLicenceTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:hint="@string/ambulance_licence"
+                            android:textSize="@dimen/text_size_15"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/ambulanceLicence"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ambulanceNameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_18"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ambulanceLicenceLayout">
+
+                        <TextView
+                            android:id="@+id/ambulanceName"
+                            android:layout_width="@dimen/layout_130"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ambulance_name"
+                            android:textColor="@color/black_400"
+                            android:textSize="@dimen/text_size_15"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/ambulanceNameTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:hint="@string/ambulance_name"
+                            android:textSize="@dimen/text_size_15"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/ambulanceName"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ambulanceAreaLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_18"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ambulanceNameLayout">
+
+                        <TextView
+                            android:id="@+id/ambulanceArea"
+                            android:layout_width="@dimen/layout_130"
+                            android:layout_height="wrap_content"
+                            android:text="@string/area"
+                            android:textColor="@color/black_400"
+                            android:textSize="@dimen/text_size_15"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/ambulanceAreaTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:hint="@string/area"
+                            android:textSize="@dimen/text_size_15"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/ambulanceArea"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ambulanceDriverNameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_18"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ambulanceAreaLayout">
+
+                        <TextView
+                            android:id="@+id/ambulanceDriverName"
+                            android:layout_width="@dimen/layout_130"
+                            android:layout_height="wrap_content"
+                            android:text="@string/driver_name"
+                            android:textColor="@color/black_400"
+                            android:textSize="@dimen/text_size_15"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/ambulanceDriverNameTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:hint="@string/sex"
+                            android:textSize="@dimen/text_size_15"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/ambulanceDriverName"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ambulanceDrivingLicenceLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_18"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ambulanceDriverNameLayout">
+
+                        <TextView
+                            android:id="@+id/ambulanceDrivingLicence"
+                            android:layout_width="@dimen/layout_130"
+                            android:layout_height="wrap_content"
+                            android:text="@string/driving_licence"
+                            android:textColor="@color/black_400"
+                            android:textSize="@dimen/text_size_15"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/ambulanceDrivingLicenceTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:hint="@string/driving_licence"
+                            android:textSize="@dimen/text_size_15"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/ambulanceDrivingLicence"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ambulanceDriverAgeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_18"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ambulanceDrivingLicenceLayout">
+
+                        <TextView
+                            android:id="@+id/ambulanceDriverAge"
+                            android:layout_width="@dimen/layout_130"
+                            android:layout_height="wrap_content"
+                            android:text="@string/driver_age"
+                            android:textColor="@color/black_400"
+                            android:textSize="@dimen/text_size_15"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/ambulanceDriverAgeTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:hint="@string/driver_age"
+                            android:textSize="@dimen/text_size_15"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/ambulanceDriverAge"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ambulanceDriverDobLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_18"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ambulanceDriverAgeLayout">
+
+                        <TextView
+                            android:id="@+id/ambulanceDriverDob"
+                            android:layout_width="@dimen/layout_130"
+                            android:layout_height="wrap_content"
+                            android:text="@string/date_of_birth"
+                            android:textColor="@color/black_400"
+                            android:textSize="@dimen/text_size_15"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/ambulanceDriverDobTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:hint="@string/date_of_birth"
+                            android:textSize="@dimen/text_size_15"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/ambulanceDriverDob"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ambulanceDriverPhoneLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_18"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ambulanceDriverDobLayout">
+
+                        <TextView
+                            android:id="@+id/ambulanceDriverPhone"
+                            android:layout_width="@dimen/layout_130"
+                            android:layout_height="wrap_content"
+                            android:text="@string/phone_number"
+                            android:textColor="@color/black_400"
+                            android:textSize="@dimen/text_size_15"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/ambulanceDriverPhoneTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:hint="@string/phone_number"
+                            android:textSize="@dimen/text_size_15"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/ambulanceDriverPhone"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnDriverCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_40"
+            android:layout_marginBottom="@dimen/margin_28"
+            android:backgroundTint="@color/sky_blue"
+            android:src="@drawable/ic_call"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/white" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

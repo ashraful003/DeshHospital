@@ -14,11 +14,20 @@
         android:id="@+id/drawerLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".presentation.MainActivity">
+            android:layout_height="match_parent">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/purple_700"
+                app:title="@string/desh_hospital"
+                app:subtitleTextColor="@color/black"
+                app:titleTextColor="@android:color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/navHostFragmentContainer"
@@ -29,7 +38,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/bottomNavigationView"
@@ -45,6 +54,16 @@
                 app:layout_constraintTop_toBottomOf="@id/navHostFragmentContainer"
                 app:menu="@menu/menu_bottom_navigation" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/vav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/nav_menu" />
+
         <FrameLayout
             android:id="@+id/fullscreenLoading"
             android:layout_width="match_parent"
